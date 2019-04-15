@@ -1,0 +1,24 @@
+#alias ~        "cd ~"
+alias ..       "cd ../\!*"
+alias -        "cd -"
+alias ls       "ls --color=tty"
+alias ll       "ls --color=tty -lsh"
+alias la       "ls -a"
+alias l.       "ls -d .*"
+alias tree     "ls -R"
+alias mv       "mv -i"
+alias cp       "cp -i"
+alias rm       "rm -i"
+alias f        "find -name"
+alias grep     "grep --color -r"
+alias g        /tools/gnu/vim81/6x/bin/gvim
+alias vi       /tools/gnu/vim81/6x/bin/vim
+alias gt       gnome-terminal
+alias gc       gnome-calculator
+#if possible, use bc (more convinient)
+alias gsm      gnome-system-monitor
+#alias gt4     "gt&; gt&; gt&; gt&"
+#alias gt16    "gt4&; gt4&; gt4&; gt4&"
+
+alias sc       "source ~/.cshrc"
+alias h        history
