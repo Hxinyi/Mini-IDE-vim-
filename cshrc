@@ -1,6 +1,14 @@
 set autolist=ambiguous #make auto complete available for directory
 set complete=enhance   #when auto complete, ignore capiral or lowercase
 
+alias cs '\
+if ("`date +%H:%M`" == "21:15") then \
+set SAY_HI="Practice makes perfect"; \
+else \
+set SAY_HI="Hello"; \
+endif; \
+echo $SAY_HI'
+
 alias setprompt '\
 set K="%{\e[0;30m%}";\
 set R="%{\e[0;31m%}";\
@@ -12,10 +20,10 @@ set C="%{\e[0;36m%}";\
 set W="%{\e[0;37m%}";\
 set RCB="%{\e[36;41;1m%}";\
 set CC="%{\e[0m%}";\
-set SAY_HI="Hello World~";\
-set CHICKEN_SOUP="Practice makes Perfect";\
 set prompt="$Y<%!>$W %n@%m $B$SAY_HI$C %/\n$CC>> "'
-#RCB means: red font, c bg,bold`
+# RCB means: red font, c bg,bold`
+# set rmstar=G
+cs
 setprompt
-
-source ~/.alias
+# nohup source happy_robot.csh 
+if (-f ~/.alias) source ~/.alias
