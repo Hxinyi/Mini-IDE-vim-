@@ -1,6 +1,14 @@
 #alias ~        "cd ~"
 alias ..       "cd ../\!*"
-alias -        "cd -"
+alias --       "cd -"
+alias +        'pushd !* && set dirs = (`dirs`)'
+alias -        'popd !* && set dirs = (`dirs`)'
+alias +1       "pushd +1"
+alias +2       "pushd +2"
+alias +3       "pushd +3"
+alias -1       "popd +1"
+alias -2       "popd +2"
+alias -3       "popd +3"
 alias ls       "ls --color=tty"
 alias ll       "ls --color=tty -lsh"
 alias la       "ls -a"
@@ -17,8 +25,6 @@ alias gt       gnome-terminal
 alias gc       gnome-calculator
 #if possible, use bc (more convinient)
 alias gsm      gnome-system-monitor
-#alias gt4     "gt&; gt&; gt&; gt&"
-#alias gt16    "gt4&; gt4&; gt4&; gt4&"
 
 alias sc       "source ~/.cshrc"
 alias h        history
