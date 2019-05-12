@@ -61,6 +61,9 @@ highlight LeaderTab guifg=#666666
 match LeaderTab /^\t/
 " delete Space at end: %s/\s*$//ge
 
+" show the current buffer path by %%
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " --------------------------------include_file-----------------------------
 " Simple function
 source ~/.vim/simple_function.vim
@@ -69,3 +72,11 @@ source ~/.vim/simple_function.vim
 source ~/.vim/uvm_syntax.vim
 
 " Verilog syntax
+
+autocmd bufwritepost .vimrc source $MYVIMRC
+
+" tmp forbidden Arrow
+noremap <Up> <Nop> 
+noremap <Down> <Nop> 
+noremap <Left> <Nop> 
+noremap <Right> <Nop>
